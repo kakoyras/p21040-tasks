@@ -1,3 +1,4 @@
+
 from urllib.request import Request, urlopen
 import json
 
@@ -51,15 +52,14 @@ print (duos)
 
 j=31
 for i in range(31):  
-    end="True"
-    if i+1>=j:
-        break 
-    while end=="True":
+    flag="True" 
+    while flag=="True":
         if duos[i]==duos[i+1]:
             duos.pop(i+1)
             j=j-1
         elif duos[i]!=duos[i+1]:
-            end="False"
+            flag="False"
+            
 print ("Η λίστα χωρίς ίδιους αριθμούς: ")
 print (duos)
 
